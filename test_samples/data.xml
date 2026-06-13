@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- XXE via DOCTYPE with internal subset (triggers: DOCTYPE with internal subset) -->
+<!DOCTYPE users [
+    <!-- XXE via SYSTEM entity (triggers: Potential XXE injection) -->
+    <!ENTITY xxe SYSTEM "file:///etc/passwd">
+    <!ENTITY localFile SYSTEM "file:///C:/Windows/win.ini">
+    <!ENTITY ssrf SYSTEM "http://internal-metadata.example.com/latest/meta-data/">
+]>
+
+<users>
+    <user id="1">
+        <name>Alice &xxe;</name>
+        <email>alice@example.com</email>
+        <role>admin</role>
+    </user>
+    <user id="2">
+        <name>Bob</name>
+        <email>bob@example.com</email>
+        <role>user</role>
+    </user>
+    <config>
+        <setting key="debug">false</setting>
+        <setting key="logLevel">info</setting>
+    </config>
+</users>

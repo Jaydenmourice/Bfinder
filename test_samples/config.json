@@ -1,0 +1,26 @@
+{
+  "app": "MyWebApp",
+  "version": "2.1.0",
+  "environment": "production",
+  "database": {
+    "host": "db.internal.example.com",
+    "port": 5432,
+    "name": "webapp_prod",
+    "password": "Pr0dPassw0rd!",
+    "api_key": "pg_live_key_abc123def456"
+  },
+  "auth": {
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.secret",
+    "secret": "jwt_signing_secret_xyz987",
+    "access_key": "AKIAIOSFODNN7EXAMPLE",
+    "private_key": "-----BEGIN RSA PRIVATE KEY-----abc123"
+  },
+  "stripe": {
+    "apikey": "sk_live_51AbcXYZ123456789"
+  },
+  "features": {
+    "darkMode": true,
+    "notifications": true,
+    "betaFeatures": false
+  }
+}

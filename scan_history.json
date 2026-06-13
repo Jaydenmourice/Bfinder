@@ -1,0 +1,1082 @@
+[
+  {
+    "timestamp": "2026-06-13 14:30:11",
+    "directory": "C:/Users/HP/Desktop/Bfinder/test_samples",
+    "issue_count": 65,
+    "issues": [
+      {
+        "type": "Exposed secret or credential in .env file",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\.env"
+      },
+      {
+        "type": "Potential debug code found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\api.ts"
+      },
+      {
+        "type": "Potential XSS vulnerability found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\api.ts"
+      },
+      {
+        "type": "Potential XSS or data leakage (insecure use of local storage)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\api.ts"
+      },
+      {
+        "type": "Insecure randomness (Math.random() usage)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\api.ts"
+      },
+      {
+        "type": "Potential XSS or security issue (insecure use of postMessage API)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\api.ts"
+      },
+      {
+        "type": "Hardcoded secret or credential found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\api.ts"
+      },
+      {
+        "type": "Insecure HTTP request (should use HTTPS)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\api.ts"
+      },
+      {
+        "type": "Potential prototype pollution",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\api.ts"
+      },
+      {
+        "type": "Type assertion to 'any' bypasses type safety",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\api.ts"
+      },
+      {
+        "type": "Potential debug code found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential XSS vulnerability found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential infinite loop found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Insecure direct object reference",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Insecure CORS configuration",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Unvalidated input from URL parameters",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential XSS or CSRF vulnerability (insecure use of cookies)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential XSS or data leakage (insecure use of local storage)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Use of deprecated or vulnerable library",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential privacy or security issue (insecure use of JavaScript APIs)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Insecure randomness (Math.random() usage)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential data leakage (insecure client-side encryption)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential security issue (WebSocket usage \u2014 verify origin validation)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential privacy issue (insecure use of geolocation API)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential information disclosure (insecure use of FileReader API)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential XSS or security issue (insecure use of postMessage API)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Hardcoded secret or credential found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential XSS vulnerability (dangerouslySetInnerHTML)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential code injection (setTimeout/setInterval with string)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Insecure HTTP request (should use HTTPS)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential prototype pollution",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Hardcoded secret or credential in JSON",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\config.json"
+      },
+      {
+        "type": "Potential XXE (XML External Entity) injection",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\data.xml"
+      },
+      {
+        "type": "DOCTYPE with internal subset \u2014 possible XXE vector",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\data.xml"
+      },
+      {
+        "type": "Inline JavaScript found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Missing alt attribute in img tag found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Empty or placeholder link found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Missing doctype declaration found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Insecure content loading found (HTTP content on HTTPS page)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "CSRF vulnerability (missing CSRF token)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Open redirect vulnerability",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Deprecated HTML attribute \"align\" found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Deprecated HTML attribute \"bgcolor\" found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Deprecated HTML attribute \"border\" found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Deprecated HTML attribute \"cellpadding\" found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Deprecated HTML attribute \"cellspacing\" found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Missing Content-Security-Policy meta tag",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Sensitive data in GET form (method='GET')",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Missing rel='noopener noreferrer' on target='_blank' link",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Autocomplete enabled on password field",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "iframe missing sandbox attribute",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Potential SQL injection (string concatenation in query)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\setup.sql"
+      },
+      {
+        "type": "Overly permissive GRANT (GRANT ALL PRIVILEGES)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\setup.sql"
+      },
+      {
+        "type": "CSS expression injection (IE legacy)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\styles.css"
+      },
+      {
+        "type": "Insecure HTTP resource in CSS url()",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\styles.css"
+      },
+      {
+        "type": "Insecure @import over HTTP",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\styles.css"
+      },
+      {
+        "type": "Potentially untrusted @import source",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\styles.css"
+      },
+      {
+        "type": "Unvalidated user input from superglobal",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\user.php"
+      },
+      {
+        "type": "Use of eval() in PHP",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\user.php"
+      },
+      {
+        "type": "Potential command injection (shell execution)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\user.php"
+      },
+      {
+        "type": "Potential SQL injection (unsanitized query)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\user.php"
+      },
+      {
+        "type": "Hardcoded credential or secret in PHP",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\user.php"
+      },
+      {
+        "type": "Potential XSS (direct echo of user input)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\user.php"
+      },
+      {
+        "type": "Potential file inclusion vulnerability (LFI/RFI)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\user.php"
+      },
+      {
+        "type": "Open redirect in PHP header()",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\user.php"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-13 14:25:51",
+    "directory": "C:/Users/HP/Desktop/Bfinder/test_samples",
+    "issue_count": 65,
+    "issues": [
+      {
+        "type": "Exposed secret or credential in .env file",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\.env"
+      },
+      {
+        "type": "Potential debug code found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\api.ts"
+      },
+      {
+        "type": "Potential XSS vulnerability found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\api.ts"
+      },
+      {
+        "type": "Potential XSS or data leakage (insecure use of local storage)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\api.ts"
+      },
+      {
+        "type": "Insecure randomness (Math.random() usage)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\api.ts"
+      },
+      {
+        "type": "Potential XSS or security issue (insecure use of postMessage API)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\api.ts"
+      },
+      {
+        "type": "Hardcoded secret or credential found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\api.ts"
+      },
+      {
+        "type": "Insecure HTTP request (should use HTTPS)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\api.ts"
+      },
+      {
+        "type": "Potential prototype pollution",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\api.ts"
+      },
+      {
+        "type": "Type assertion to 'any' bypasses type safety",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\api.ts"
+      },
+      {
+        "type": "Potential debug code found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential XSS vulnerability found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential infinite loop found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Insecure direct object reference",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Insecure CORS configuration",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Unvalidated input from URL parameters",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential XSS or CSRF vulnerability (insecure use of cookies)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential XSS or data leakage (insecure use of local storage)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Use of deprecated or vulnerable library",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential privacy or security issue (insecure use of JavaScript APIs)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Insecure randomness (Math.random() usage)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential data leakage (insecure client-side encryption)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential security issue (WebSocket usage \u2014 verify origin validation)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential privacy issue (insecure use of geolocation API)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential information disclosure (insecure use of FileReader API)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential XSS or security issue (insecure use of postMessage API)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Hardcoded secret or credential found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential XSS vulnerability (dangerouslySetInnerHTML)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential code injection (setTimeout/setInterval with string)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Insecure HTTP request (should use HTTPS)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential prototype pollution",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Hardcoded secret or credential in JSON",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\config.json"
+      },
+      {
+        "type": "Potential XXE (XML External Entity) injection",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\data.xml"
+      },
+      {
+        "type": "DOCTYPE with internal subset \u2014 possible XXE vector",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\data.xml"
+      },
+      {
+        "type": "Inline JavaScript found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Missing alt attribute in img tag found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Empty or placeholder link found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Missing doctype declaration found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Insecure content loading found (HTTP content on HTTPS page)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "CSRF vulnerability (missing CSRF token)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Open redirect vulnerability",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Deprecated HTML attribute \"align\" found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Deprecated HTML attribute \"bgcolor\" found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Deprecated HTML attribute \"border\" found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Deprecated HTML attribute \"cellpadding\" found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Deprecated HTML attribute \"cellspacing\" found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Missing Content-Security-Policy meta tag",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Sensitive data in GET form (method='GET')",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Missing rel='noopener noreferrer' on target='_blank' link",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Autocomplete enabled on password field",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "iframe missing sandbox attribute",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Potential SQL injection (string concatenation in query)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\setup.sql"
+      },
+      {
+        "type": "Overly permissive GRANT (GRANT ALL PRIVILEGES)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\setup.sql"
+      },
+      {
+        "type": "CSS expression injection (IE legacy)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\styles.css"
+      },
+      {
+        "type": "Insecure HTTP resource in CSS url()",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\styles.css"
+      },
+      {
+        "type": "Insecure @import over HTTP",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\styles.css"
+      },
+      {
+        "type": "Potentially untrusted @import source",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\styles.css"
+      },
+      {
+        "type": "Unvalidated user input from superglobal",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\user.php"
+      },
+      {
+        "type": "Use of eval() in PHP",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\user.php"
+      },
+      {
+        "type": "Potential command injection (shell execution)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\user.php"
+      },
+      {
+        "type": "Potential SQL injection (unsanitized query)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\user.php"
+      },
+      {
+        "type": "Hardcoded credential or secret in PHP",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\user.php"
+      },
+      {
+        "type": "Potential XSS (direct echo of user input)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\user.php"
+      },
+      {
+        "type": "Potential file inclusion vulnerability (LFI/RFI)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\user.php"
+      },
+      {
+        "type": "Open redirect in PHP header()",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\user.php"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-13 14:25:10",
+    "directory": "C:/Users/HP/Desktop/Bfinder/test_samples",
+    "issue_count": 65,
+    "issues": [
+      {
+        "type": "Exposed secret or credential in .env file",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\.env"
+      },
+      {
+        "type": "Potential debug code found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\api.ts"
+      },
+      {
+        "type": "Potential XSS vulnerability found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\api.ts"
+      },
+      {
+        "type": "Potential XSS or data leakage (insecure use of local storage)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\api.ts"
+      },
+      {
+        "type": "Insecure randomness (Math.random() usage)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\api.ts"
+      },
+      {
+        "type": "Potential XSS or security issue (insecure use of postMessage API)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\api.ts"
+      },
+      {
+        "type": "Hardcoded secret or credential found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\api.ts"
+      },
+      {
+        "type": "Insecure HTTP request (should use HTTPS)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\api.ts"
+      },
+      {
+        "type": "Potential prototype pollution",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\api.ts"
+      },
+      {
+        "type": "Type assertion to 'any' bypasses type safety",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\api.ts"
+      },
+      {
+        "type": "Potential debug code found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential XSS vulnerability found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential infinite loop found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Insecure direct object reference",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Insecure CORS configuration",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Unvalidated input from URL parameters",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential XSS or CSRF vulnerability (insecure use of cookies)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential XSS or data leakage (insecure use of local storage)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Use of deprecated or vulnerable library",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential privacy or security issue (insecure use of JavaScript APIs)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Insecure randomness (Math.random() usage)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential data leakage (insecure client-side encryption)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential security issue (WebSocket usage \u2014 verify origin validation)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential privacy issue (insecure use of geolocation API)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential information disclosure (insecure use of FileReader API)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential XSS or security issue (insecure use of postMessage API)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Hardcoded secret or credential found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential XSS vulnerability (dangerouslySetInnerHTML)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential code injection (setTimeout/setInterval with string)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Insecure HTTP request (should use HTTPS)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential prototype pollution",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Hardcoded secret or credential in JSON",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\config.json"
+      },
+      {
+        "type": "Potential XXE (XML External Entity) injection",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\data.xml"
+      },
+      {
+        "type": "DOCTYPE with internal subset \u2014 possible XXE vector",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\data.xml"
+      },
+      {
+        "type": "Inline JavaScript found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Missing alt attribute in img tag found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Empty or placeholder link found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Missing doctype declaration found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Insecure content loading found (HTTP content on HTTPS page)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "CSRF vulnerability (missing CSRF token)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Open redirect vulnerability",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Deprecated HTML attribute \"align\" found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Deprecated HTML attribute \"bgcolor\" found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Deprecated HTML attribute \"border\" found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Deprecated HTML attribute \"cellpadding\" found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Deprecated HTML attribute \"cellspacing\" found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Missing Content-Security-Policy meta tag",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Sensitive data in GET form (method='GET')",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Missing rel='noopener noreferrer' on target='_blank' link",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Autocomplete enabled on password field",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "iframe missing sandbox attribute",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Potential SQL injection (string concatenation in query)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\setup.sql"
+      },
+      {
+        "type": "Overly permissive GRANT (GRANT ALL PRIVILEGES)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\setup.sql"
+      },
+      {
+        "type": "CSS expression injection (IE legacy)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\styles.css"
+      },
+      {
+        "type": "Insecure HTTP resource in CSS url()",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\styles.css"
+      },
+      {
+        "type": "Insecure @import over HTTP",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\styles.css"
+      },
+      {
+        "type": "Potentially untrusted @import source",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\styles.css"
+      },
+      {
+        "type": "Unvalidated user input from superglobal",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\user.php"
+      },
+      {
+        "type": "Use of eval() in PHP",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\user.php"
+      },
+      {
+        "type": "Potential command injection (shell execution)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\user.php"
+      },
+      {
+        "type": "Potential SQL injection (unsanitized query)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\user.php"
+      },
+      {
+        "type": "Hardcoded credential or secret in PHP",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\user.php"
+      },
+      {
+        "type": "Potential XSS (direct echo of user input)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\user.php"
+      },
+      {
+        "type": "Potential file inclusion vulnerability (LFI/RFI)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\user.php"
+      },
+      {
+        "type": "Open redirect in PHP header()",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\user.php"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-13 13:48:06",
+    "directory": "C:/Users/HP/Desktop/Bfinder/test_samples",
+    "issue_count": 65,
+    "issues": [
+      {
+        "type": "Exposed secret or credential in .env file",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\.env"
+      },
+      {
+        "type": "Potential debug code found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\api.ts"
+      },
+      {
+        "type": "Potential XSS vulnerability found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\api.ts"
+      },
+      {
+        "type": "Potential XSS or data leakage (insecure use of local storage)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\api.ts"
+      },
+      {
+        "type": "Insecure randomness (Math.random() usage)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\api.ts"
+      },
+      {
+        "type": "Potential XSS or security issue (insecure use of postMessage API)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\api.ts"
+      },
+      {
+        "type": "Hardcoded secret or credential found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\api.ts"
+      },
+      {
+        "type": "Insecure HTTP request (should use HTTPS)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\api.ts"
+      },
+      {
+        "type": "Potential prototype pollution",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\api.ts"
+      },
+      {
+        "type": "Type assertion to 'any' bypasses type safety",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\api.ts"
+      },
+      {
+        "type": "Potential debug code found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential XSS vulnerability found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential infinite loop found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Insecure direct object reference",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Insecure CORS configuration",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Unvalidated input from URL parameters",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential XSS or CSRF vulnerability (insecure use of cookies)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential XSS or data leakage (insecure use of local storage)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Use of deprecated or vulnerable library",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential privacy or security issue (insecure use of JavaScript APIs)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Insecure randomness (Math.random() usage)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential data leakage (insecure client-side encryption)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential security issue (WebSocket usage \u2014 verify origin validation)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential privacy issue (insecure use of geolocation API)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential information disclosure (insecure use of FileReader API)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential XSS or security issue (insecure use of postMessage API)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Hardcoded secret or credential found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential XSS vulnerability (dangerouslySetInnerHTML)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential code injection (setTimeout/setInterval with string)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Insecure HTTP request (should use HTTPS)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Potential prototype pollution",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\app.js"
+      },
+      {
+        "type": "Hardcoded secret or credential in JSON",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\config.json"
+      },
+      {
+        "type": "Potential XXE (XML External Entity) injection",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\data.xml"
+      },
+      {
+        "type": "DOCTYPE with internal subset \u2014 possible XXE vector",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\data.xml"
+      },
+      {
+        "type": "Inline JavaScript found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Missing alt attribute in img tag found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Empty or placeholder link found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Missing doctype declaration found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Insecure content loading found (HTTP content on HTTPS page)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "CSRF vulnerability (missing CSRF token)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Open redirect vulnerability",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Deprecated HTML attribute \"align\" found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Deprecated HTML attribute \"bgcolor\" found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Deprecated HTML attribute \"border\" found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Deprecated HTML attribute \"cellpadding\" found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Deprecated HTML attribute \"cellspacing\" found",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Missing Content-Security-Policy meta tag",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Sensitive data in GET form (method='GET')",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Missing rel='noopener noreferrer' on target='_blank' link",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Autocomplete enabled on password field",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "iframe missing sandbox attribute",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\index.html"
+      },
+      {
+        "type": "Potential SQL injection (string concatenation in query)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\setup.sql"
+      },
+      {
+        "type": "Overly permissive GRANT (GRANT ALL PRIVILEGES)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\setup.sql"
+      },
+      {
+        "type": "CSS expression injection (IE legacy)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\styles.css"
+      },
+      {
+        "type": "Insecure HTTP resource in CSS url()",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\styles.css"
+      },
+      {
+        "type": "Insecure @import over HTTP",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\styles.css"
+      },
+      {
+        "type": "Potentially untrusted @import source",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\styles.css"
+      },
+      {
+        "type": "Unvalidated user input from superglobal",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\user.php"
+      },
+      {
+        "type": "Use of eval() in PHP",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\user.php"
+      },
+      {
+        "type": "Potential command injection (shell execution)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\user.php"
+      },
+      {
+        "type": "Potential SQL injection (unsanitized query)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\user.php"
+      },
+      {
+        "type": "Hardcoded credential or secret in PHP",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\user.php"
+      },
+      {
+        "type": "Potential XSS (direct echo of user input)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\user.php"
+      },
+      {
+        "type": "Potential file inclusion vulnerability (LFI/RFI)",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\user.php"
+      },
+      {
+        "type": "Open redirect in PHP header()",
+        "file": "C:/Users/HP/Desktop/Bfinder/test_samples\\user.php"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-13 13:40:40",
+    "directory": "C:/Users/HP/Desktop/Bfinder/functions",
+    "issue_count": 0,
+    "issues": []
+  },
+  {
+    "timestamp": "2026-06-13 13:36:28",
+    "directory": "C:/Users/HP/Desktop/Bfinder/functions",
+    "issue_count": 0,
+    "issues": []
+  }
+]

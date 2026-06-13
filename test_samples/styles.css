@@ -1,0 +1,35 @@
+/* Application stylesheet */
+
+/* CSS expression injection — IE legacy (triggers: CSS expression injection) */
+.dynamic-width {
+    width: expression(document.body.clientWidth / 2 + "px");
+    color: expression(alert('xss'));
+}
+
+/* HTTP resource in url() — mixed content (triggers: Insecure HTTP resource) */
+.hero {
+    background-image: url("http://cdn.example.com/images/hero.jpg");
+    background-size: cover;
+}
+
+.logo {
+    background: url('http://assets.example.com/logo.png') no-repeat center;
+}
+
+/* @import over HTTP — MITM risk (triggers: Insecure @import over HTTP) */
+@import "http://fonts.example.com/roboto.css";
+
+/* @import from relative/uncontrolled path (triggers: Potentially untrusted @import) */
+@import "../../shared/base.css";
+@import "vendor/external-theme.css";
+
+/* Normal styles below */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #333;
+}

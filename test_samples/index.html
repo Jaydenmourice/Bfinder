@@ -1,0 +1,76 @@
+<!-- No DOCTYPE declaration (triggers: Missing doctype) -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- No Content-Security-Policy meta tag (triggers: Missing CSP) -->
+    <title>Vulnerable Demo Page</title>
+
+    <!-- HTTP resource on page (triggers: Insecure content loading) -->
+    <script src="http://cdn.example.com/library.js"></script>
+    <link href="http://fonts.example.com/font.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Inline JavaScript (triggers: Inline JavaScript found) -->
+    <script>
+        var user = "admin";
+        if (user.length > 0) {
+            document.getElementById("welcome").textContent = "Hello " + user;
+        }
+    </script>
+
+    <!-- Image without alt attribute (triggers: Missing alt attribute) -->
+    <img src="images/banner.jpg" width="800" height="200">
+    <img src="images/logo.png">
+
+    <!-- Empty / placeholder link (triggers: Empty or placeholder link) -->
+    <a href="#">Home</a>
+    <a href="javascript:void(0)">Dashboard</a>
+
+    <!-- Deprecated HTML attributes (triggers: Deprecated HTML attribute) -->
+    <table border="1" cellpadding="5" cellspacing="0">
+        <tr bgcolor="#cccccc" align="center">
+            <th>Name</th>
+            <th>Score</th>
+        </tr>
+        <tr>
+            <td>Alice</td>
+            <td>95</td>
+        </tr>
+    </table>
+
+    <!-- CSRF: form with no csrf hidden input (triggers: CSRF vulnerability) -->
+    <form action="/transfer" method="POST">
+        <input type="text"     name="amount"    placeholder="Amount">
+        <input type="text"     name="recipient" placeholder="To account">
+        <button type="submit">Transfer</button>
+    </form>
+
+    <!-- GET form with sensitive field (triggers: Sensitive data in GET form) -->
+    <form action="/search" method="GET">
+        <input type="text"     name="query"    placeholder="Search">
+        <input type="password" name="pin"      placeholder="PIN">
+        <button type="submit">Search</button>
+    </form>
+
+    <!-- Open redirect via query param (triggers: Open redirect vulnerability) -->
+    <a href="/login?return_to=http://evil.example.com">Login</a>
+    <a href="/auth?redirect_url=https://phishing.site">Authenticate</a>
+
+    <!-- target=_blank without noopener (triggers: Missing noopener) -->
+    <a href="https://partner.example.com" target="_blank">Visit Partner</a>
+
+    <!-- Password field with autocomplete not disabled (triggers: Autocomplete) -->
+    <form action="/login" method="POST">
+        <input type="text"     name="username" placeholder="Username">
+        <input type="password" name="password" placeholder="Password">
+        <button type="submit">Login</button>
+    </form>
+
+    <!-- iframe without sandbox (triggers: iframe missing sandbox) -->
+    <iframe src="https://widget.example.com/embed" width="600" height="400"></iframe>
+
+    <div id="welcome"></div>
+
+</body>
+</html>

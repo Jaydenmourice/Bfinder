@@ -80,19 +80,19 @@ def scan_js_file(file_path):
     if re.search(r'\bconsole\.log\b', content):
         bugs.append(("Potential debug code found", file_path))
 
-    if re.search(r'\b(?:eval|document\.write|innerHTML)\b', content):
+    if re.search(r'\b(?:eval|document\.write)\b|(?:innerHTML|outerHTML)\s*=|insertAdjacentHTML\s*\(', content):
         bugs.append(("Potential XSS vulnerability found", file_path))
 
     if re.search(r'for\s*\(\s*;\s*;\s*\)|while\s*\(\s*(true|1|!0)\s*\)', content):
         bugs.append(("Potential infinite loop found", file_path))
 
-    if re.search(r'window\[\s*["\'].*?["\']\s*\]', content):
+    if re.search(r'window\[\s*[A-Za-z_$]', content):
         bugs.append(("Insecure direct object reference", file_path))
 
     if re.search(r'XMLHttpRequest\.withCredentials\s*=\s*true', content):
         bugs.append(("Insecure CORS configuration", file_path))
 
-    if re.search(r'location\.search|\.hash\b', content):
+    if re.search(r'location\.search|location\.hash\b', content):
         bugs.append(("Unvalidated input from URL parameters", file_path))
 
     if re.search(r'document\.cookie\s*=', content):
@@ -101,10 +101,15 @@ def scan_js_file(file_path):
     if re.search(r'localStorage\s*[\[.]', content):
         bugs.append(("Potential XSS or data leakage (insecure use of local storage)", file_path))
 
-    if re.search(r'angular\.js|jquery\.js|prototype\.js|react\.js|vue\.js', content):
+    if re.search(r'(?:require|from)\s*[(\s]*["\'](?:jquery|angularjs|prototype)["\']', content, re.IGNORECASE):
         bugs.append(("Use of deprecated or vulnerable library", file_path))
 
-    if re.search(r'navigator\.|screen\.|window\.location\b|document\.referrer\b|history\.', content):
+    if re.search(
+        r'navigator\.(userAgent|platform|plugins|hardwareConcurrency|deviceMemory|getBattery)\b'
+        r'|screen\.(width|height|availWidth|availHeight|colorDepth|pixelDepth)\b'
+        r'|document\.referrer\b',
+        content
+    ):
         bugs.append(("Potential privacy or security issue (insecure use of JavaScript APIs)", file_path))
 
     if re.search(r'Math\.random\b', content):
@@ -122,7 +127,7 @@ def scan_js_file(file_path):
     if re.search(r'FileReader\s*\(', content):
         bugs.append(("Potential information disclosure (insecure use of FileReader API)", file_path))
 
-    if re.search(r'window\.postMessage\s*\(', content):
+    if re.search(r'window\.postMessage\s*\(|addEventListener\s*\(\s*["\']message["\']', content):
         bugs.append(("Potential XSS or security issue (insecure use of postMessage API)", file_path))
 
     if re.search(r'(apiKey|api_key|password|secret|token)\s*[:=]\s*["\'][^"\']{6,}["\']', content, re.IGNORECASE):
@@ -149,10 +154,10 @@ def scan_html_file(file_path):
 
     bugs = []
 
-    if re.search(r'<script[^>]*>[^<]*<\/script>', content):
+    if re.search(r'<script(?![^>]*\bsrc\b)[^>]*>\s*\S[\s\S]*?<\/script>', content, re.IGNORECASE):
         bugs.append(("Inline JavaScript found", file_path))
 
-    if re.search(r'<img\s+[^>]*>', content) and not re.search(r'alt\s*=\s*".*?"', content):
+    if re.search(r'<img\b(?![^>]*\balt\s*=)[^>]*>', content, re.IGNORECASE):
         bugs.append(("Missing alt attribute in img tag found", file_path))
 
     if re.search(r'href\s*=\s*"(?:#|javascript:void\(0\)|)"\s*', content):
@@ -164,10 +169,12 @@ def scan_html_file(file_path):
     if re.search(r'<(iframe|script|img|link|embed|object)\s+[^>]*\bsrc\s*=\s*"[^"]*http://', content, re.IGNORECASE):
         bugs.append(("Insecure content loading found (HTTP content on HTTPS page)", file_path))
 
-    if re.search(r'<form[^>]*>', content) and not re.search(r'\bcsrf\b', content, re.IGNORECASE):
+    if re.search(r'<form[^>]*>', content, re.IGNORECASE) and not re.search(
+        r'<input[^>]+(?:name|value)\s*=\s*["\'][^"\']*csrf[^"\']*["\']', content, re.IGNORECASE
+    ):
         bugs.append(("CSRF vulnerability (missing CSRF token)", file_path))
 
-    if re.search(r'\bredirect_uri\s*=\s*"[^"]+', content):
+    if re.search(r'\b(?:redirect_uri|redirect_url|return_url|return_to|callback_url)\s*=\s*(?:["\'][^"\']{4,}|[^\s"\'>&]{4,})', content, re.IGNORECASE):
         bugs.append(("Open redirect vulnerability", file_path))
 
     deprecated_attributes = ['align', 'bgcolor', 'border', 'cellpadding', 'cellspacing']
@@ -185,7 +192,10 @@ def scan_html_file(file_path):
        not re.search(r'rel\s*=\s*["\'][^"\']*noopener', content, re.IGNORECASE):
         bugs.append(("Missing rel='noopener noreferrer' on target='_blank' link", file_path))
 
-    if re.search(r'<input[^>]+type\s*=\s*["\']password["\'][^>]*autocomplete\s*=\s*["\']on["\']', content, re.IGNORECASE):
+    if re.search(
+        r'<input\b(?=[^>]*\btype\s*=\s*["\']password["\'])(?![^>]*\bautocomplete\s*=\s*["\'](?:off|new-password|current-password)["\'])[^>]*>',
+        content, re.IGNORECASE
+    ):
         bugs.append(("Autocomplete enabled on password field", file_path))
 
     if re.search(r'<iframe(?![^>]*\bsandbox\b)[^>]*>', content, re.IGNORECASE):
@@ -210,13 +220,14 @@ def scan_php_file(file_path):
         bugs.append(("Potential command injection (shell execution)", file_path))
 
     if re.search(r'mysql_query\s*\(.*\$', content) or \
-       re.search(r'(SELECT|INSERT|UPDATE|DELETE)[^;]*\'\s*\.\s*\$', content, re.IGNORECASE):
+       re.search(r'(SELECT|INSERT|UPDATE|DELETE)[^;]*\'\s*\.\s*\$', content, re.IGNORECASE) or \
+       re.search(r'->\s*query\s*\([^)]*\$', content):
         bugs.append(("Potential SQL injection (unsanitized query)", file_path))
 
     if re.search(r'(password|passwd|secret|api_key|apikey|token)\s*=\s*["\'][^"\']{4,}["\']', content, re.IGNORECASE):
         bugs.append(("Hardcoded credential or secret in PHP", file_path))
 
-    if re.search(r'echo\s+\$_(GET|POST|REQUEST)', content):
+    if re.search(r'(?:echo|print(?:f)?)\s+.*\$_(GET|POST|REQUEST)', content):
         bugs.append(("Potential XSS (direct echo of user input)", file_path))
 
     if re.search(r'\b(include|require|include_once|require_once)\s*\(\s*\$', content):

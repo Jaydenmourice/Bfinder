@@ -39,8 +39,8 @@ class LoginDialog(QDialog):
 
     def check_password(self):
         entered_password = self.password_input.text()
-        system_password = "4321"
-        if entered_password == system_password:
+        stored_password = keyring.get_password("system", "user") or "4321"
+        if entered_password == stored_password:
             self.accept()
         else:
             self.password_input.clear()
@@ -207,6 +207,14 @@ class Ui_Bfinder(object):
         self.label_8.setScaledContents(True)
         self.label_8.setObjectName("label_8")
 
+        self.pushButton_logout = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_logout.setGeometry(QtCore.QRect(60, 400, 141, 41))
+        self.pushButton_logout.setStyleSheet(
+            "\nfont: 81 10pt \"Cantarell\";\nfont:bold;\ncolor:white;\nborder-radius:8px;\nbackground:#c0392b;\n"
+        )
+        self.pushButton_logout.setObjectName("pushButton_logout")
+        self.pushButton_logout.clicked.connect(self.logout)
+
         self.label_9 = QtWidgets.QLabel(self.centralwidget)
         self.label_9.setGeometry(QtCore.QRect(330, -160, 631, 601))
         self.label_9.setStyleSheet("background:none;")
@@ -232,6 +240,7 @@ class Ui_Bfinder(object):
         self.scrollArea.raise_()
         self.lineEdit.raise_()
         self.pushButton_2.raise_()
+        self.pushButton_logout.raise_()
         self.scrollArea_2.raise_()
         self.lineEdit_2.raise_()
         self.widget_2.raise_()
@@ -257,6 +266,16 @@ class Ui_Bfinder(object):
         self.lineEdit_2.setCursorPosition(0)
         self.label_5.setText(_translate("Bfinder", "Documentation"))
         self.label_7.setText(_translate("Bfinder", "Contacts"))
+        self.pushButton_logout.setText(_translate("Bfinder", "Logout"))
+
+    def logout(self):
+        main_window = self.centralwidget.window()
+        main_window.hide()
+        login_dialog = LoginDialog()
+        if login_dialog.exec_() == QDialog.Accepted:
+            main_window.show()
+        else:
+            sys.exit()
 
     def change_password_dialog(self, event):
         if event.button() == QtCore.Qt.LeftButton:
@@ -414,7 +433,7 @@ if __name__ == "__main__":
     Bfinder = QtWidgets.QMainWindow()
     ui = Ui_Bfinder()
     ui.setupUi(Bfinder)
-    Bfinder.setFixedSize(Bfinder.size())
+    Bfinder.setMinimumSize(Bfinder.size())
     icon = QtGui.QIcon("images/icon.png")
     Bfinder.setWindowIcon(icon)
     Bfinder.show()

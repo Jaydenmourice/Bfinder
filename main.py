@@ -47,6 +47,18 @@ class LoginDialog(QDialog):
             self.password_label.setText("Incorrect Password. Try again.")
 
 
+class BfinderWindow(QtWidgets.QMainWindow):
+    def __init__(self):
+        super().__init__()
+        self._ui = None
+
+    def resizeEvent(self, event):
+        super().resizeEvent(event)
+        if self._ui is not None:
+            cw = self.centralWidget()
+            self._ui.adjust_layout(cw.width(), cw.height())
+
+
 class Ui_Bfinder(object):
     def setupUi(self, Bfinder):
         self.login_dialog = LoginDialog()
@@ -268,6 +280,33 @@ class Ui_Bfinder(object):
         self.label_7.setText(_translate("Bfinder", "Contacts"))
         self.pushButton_logout.setText(_translate("Bfinder", "Logout"))
 
+    def adjust_layout(self, W, H):
+        CONTENT_X = 270
+        each_h = max(80, (H - 164) // 2)
+        cw = W - CONTENT_X - 147          # keep same right gap as original for Browse button
+
+        # Sidebar stretches full height
+        self.graphicsView.setGeometry(20, 10, 231, H - 45)
+
+        # Tips panel
+        self.lineEdit_2.setGeometry(CONTENT_X, 40, cw, 27)
+        self.scrollArea_2.setGeometry(CONTENT_X, 80, cw, each_h)
+
+        # Bugs panel
+        bugs_label_y = 80 + each_h + 9
+        bugs_y = bugs_label_y + 40
+        self.lineEdit.setGeometry(CONTENT_X, bugs_label_y, cw, 27)
+        self.scrollArea.setGeometry(CONTENT_X, bugs_y, cw, max(50, H - bugs_y - 35))
+
+        # Buttons anchor to bottom
+        self.pushButton.setGeometry(W - 128, H - 106, 101, 41)
+        self.pushButton_2.setGeometry(60, H - 106, 141, 41)
+        self.pushButton_logout.setGeometry(60, H - 186, 141, 41)
+
+        # Background decorations scale with the window
+        self.label_9.setGeometry(CONTENT_X, -160, W - CONTENT_X + 50, H + 200)
+        self.label_10.setGeometry(W - 278, 110, 450, H)
+
     def logout(self):
         main_window = self.centralwidget.window()
         main_window.hide()
@@ -430,10 +469,11 @@ class Ui_Bfinder(object):
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
-    Bfinder = QtWidgets.QMainWindow()
+    Bfinder = BfinderWindow()
     ui = Ui_Bfinder()
     ui.setupUi(Bfinder)
-    Bfinder.setMinimumSize(Bfinder.size())
+    Bfinder._ui = ui
+    Bfinder.setMinimumSize(868, 586)
     icon = QtGui.QIcon("images/icon.png")
     Bfinder.setWindowIcon(icon)
     Bfinder.show()

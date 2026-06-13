@@ -6,7 +6,11 @@ import sys
 import keyring
 from xhtml2pdf import pisa
 
-from functions.bug_exp import scan_html_file, scan_js_file, get_bug_explanation
+from functions.bug_exp import (
+    scan_html_file, scan_js_file, scan_php_file, scan_css_file,
+    scan_ts_file, scan_json_file, scan_env_file, scan_xml_file,
+    scan_sql_file, get_bug_explanation
+)
 from functions.sec_tip import get_random_security_tips
 
 
@@ -80,20 +84,20 @@ class Ui_Bfinder(object):
         self.graphicsView.setObjectName("graphicsView")
 
         self.widget = QtWidgets.QWidget(self.centralwidget)
-        self.widget.setGeometry(QtCore.QRect(50, 120, 211, 71))
+        self.widget.setGeometry(QtCore.QRect(30, 120, 225, 71))
         self.widget.setStyleSheet("background:transparent;\ncursor:pointer;")
         self.widget.setObjectName("widget")
 
         self.label_3 = QtWidgets.QLabel(self.widget)
-        self.label_3.setGeometry(QtCore.QRect(20, 30, 141, 31))
+        self.label_3.setGeometry(QtCore.QRect(12, 30, 180, 31))
         self.label_3.setStyleSheet(
-            "font: 81 11pt \"Cantarell\";\nfont:bold;\ncolor: white;\nbackground:transparent;\n"
+            "font: 81 10pt \"Cantarell\";\nfont:bold;\ncolor: white;\nbackground:transparent;\n"
         )
         self.label_3.setObjectName("label_3")
         self.label_3.mousePressEvent = self.change_password_dialog
 
         self.label_4 = QtWidgets.QLabel(self.widget)
-        self.label_4.setGeometry(QtCore.QRect(150, 30, 31, 31))
+        self.label_4.setGeometry(QtCore.QRect(188, 30, 31, 31))
         self.label_4.setStyleSheet("background:transparent;")
         self.label_4.setText("")
         self.label_4.setPixmap(QtGui.QPixmap("images/change.png"))
@@ -124,14 +128,14 @@ class Ui_Bfinder(object):
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
 
         self.lineEdit = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit.setGeometry(QtCore.QRect(360, 300, 261, 27))
+        self.lineEdit.setGeometry(QtCore.QRect(270, 300, 451, 27))
         self.lineEdit.setStyleSheet(
             "border:none;\nfont: 81 11pt \"Cantarell\";\nfont:bold;\ncolor: white;\nbackground:transparent;"
         )
         self.lineEdit.setObjectName("lineEdit")
 
         self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_2.setGeometry(QtCore.QRect(80, 480, 101, 41))
+        self.pushButton_2.setGeometry(QtCore.QRect(60, 480, 141, 41))
         self.pushButton_2.setStyleSheet(
             "\nfont: 81 11pt \"Cantarell\";\nfont:bold;\ncolor:white;\nborder-radius:8px;\nbackground:#00bf63;\n"
         )
@@ -155,27 +159,27 @@ class Ui_Bfinder(object):
         self.display_security_tips()
 
         self.lineEdit_2 = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_2.setGeometry(QtCore.QRect(400, 40, 181, 27))
+        self.lineEdit_2.setGeometry(QtCore.QRect(270, 40, 451, 27))
         self.lineEdit_2.setStyleSheet(
             "border:none;\nfont: 81 11pt \"Cantarell\";\nfont:bold;\ncolor: white;\nbackground:transparent;"
         )
         self.lineEdit_2.setObjectName("lineEdit_2")
 
         self.widget_2 = QtWidgets.QWidget(self.centralwidget)
-        self.widget_2.setGeometry(QtCore.QRect(50, 200, 211, 71))
+        self.widget_2.setGeometry(QtCore.QRect(30, 200, 225, 71))
         self.widget_2.setStyleSheet("background:transparent;\ncursor:pointer;")
         self.widget_2.setObjectName("widget_2")
 
         self.label_5 = QtWidgets.QLabel(self.widget_2)
-        self.label_5.setGeometry(QtCore.QRect(20, 30, 141, 31))
+        self.label_5.setGeometry(QtCore.QRect(12, 30, 180, 31))
         self.label_5.setStyleSheet(
-            "font: 81 11pt \"Cantarell\";\nfont:bold;\ncolor: white;\nbackground:transparent;\n"
+            "font: 81 10pt \"Cantarell\";\nfont:bold;\ncolor: white;\nbackground:transparent;\n"
         )
         self.label_5.setObjectName("label_5")
         self.label_5.mousePressEvent = self.show_usage_instructions
 
         self.label_6 = QtWidgets.QLabel(self.widget_2)
-        self.label_6.setGeometry(QtCore.QRect(150, 30, 31, 31))
+        self.label_6.setGeometry(QtCore.QRect(188, 30, 31, 31))
         self.label_6.setStyleSheet("background:transparent;")
         self.label_6.setText("")
         self.label_6.setPixmap(QtGui.QPixmap("images/doc.png"))
@@ -183,20 +187,20 @@ class Ui_Bfinder(object):
         self.label_6.setObjectName("label_6")
 
         self.widget_3 = QtWidgets.QWidget(self.centralwidget)
-        self.widget_3.setGeometry(QtCore.QRect(40, 280, 211, 71))
+        self.widget_3.setGeometry(QtCore.QRect(30, 280, 225, 71))
         self.widget_3.setStyleSheet("background:transparent;\ncursor:pointer;")
         self.widget_3.setObjectName("widget_3")
 
         self.label_7 = QtWidgets.QLabel(self.widget_3)
-        self.label_7.setGeometry(QtCore.QRect(30, 30, 141, 31))
+        self.label_7.setGeometry(QtCore.QRect(12, 30, 155, 31))
         self.label_7.setStyleSheet(
-            "font: 81 11pt \"Cantarell\";\nfont:bold;\ncolor: white;\nbackground:transparent;\n"
+            "font: 81 10pt \"Cantarell\";\nfont:bold;\ncolor: white;\nbackground:transparent;\n"
         )
         self.label_7.setObjectName("label_7")
         self.label_7.mousePressEvent = self.show_contact_information
 
         self.label_8 = QtWidgets.QLabel(self.widget_3)
-        self.label_8.setGeometry(QtCore.QRect(160, 30, 31, 31))
+        self.label_8.setGeometry(QtCore.QRect(170, 30, 31, 31))
         self.label_8.setStyleSheet("background:transparent;")
         self.label_8.setText("")
         self.label_8.setPixmap(QtGui.QPixmap("images/con.png"))
@@ -247,8 +251,10 @@ class Ui_Bfinder(object):
         self.label_3.setText(_translate("Bfinder", "Change password"))
         self.pushButton.setText(_translate("Bfinder", "Browse"))
         self.lineEdit.setText(_translate("Bfinder", "Potential bugs and vulnerabilities found"))
+        self.lineEdit.setCursorPosition(0)
         self.pushButton_2.setText(_translate("Bfinder", "Print Report"))
         self.lineEdit_2.setText(_translate("Bfinder", "Software Security Tips"))
+        self.lineEdit_2.setCursorPosition(0)
         self.label_5.setText(_translate("Bfinder", "Documentation"))
         self.label_7.setText(_translate("Bfinder", "Contacts"))
 
@@ -266,7 +272,7 @@ class Ui_Bfinder(object):
             instructions_text = (
                 "Here are the instructions on how to use the application:\n\n"
                 "1. Click the Browse button and select your project directory.\n\n"
-                "2. Bfinder will recursively scan all HTML and JavaScript files.\n\n"
+                "2. Bfinder will recursively scan HTML, JavaScript, TypeScript, PHP, CSS, JSON, .env, XML, and SQL files.\n\n"
                 "3. Potential bugs and vulnerabilities will appear in the bottom panel.\n\n"
                 "4. Click Print Report to save an encrypted PDF of the results."
             )
@@ -318,6 +324,20 @@ class Ui_Bfinder(object):
                     bug_report.extend(scan_js_file(full_path))
                 elif file_name.endswith('.html'):
                     bug_report.extend(scan_html_file(full_path))
+                elif file_name.endswith('.php'):
+                    bug_report.extend(scan_php_file(full_path))
+                elif file_name.endswith('.css'):
+                    bug_report.extend(scan_css_file(full_path))
+                elif file_name.endswith('.ts') and not file_name.endswith('.d.ts'):
+                    bug_report.extend(scan_ts_file(full_path))
+                elif file_name.endswith('.json'):
+                    bug_report.extend(scan_json_file(full_path))
+                elif file_name == '.env' or file_name.startswith('.env.'):
+                    bug_report.extend(scan_env_file(full_path))
+                elif file_name.endswith('.xml'):
+                    bug_report.extend(scan_xml_file(full_path))
+                elif file_name.endswith('.sql'):
+                    bug_report.extend(scan_sql_file(full_path))
         return bug_report
 
     def print_report(self):
